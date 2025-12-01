@@ -34,7 +34,7 @@ pip install -r requirements.txt
 Run the tool from the terminal:
 
 ```bash
-python marina.py
+python3 marina.py
 ```
 
 ## 💻 Screenshot
