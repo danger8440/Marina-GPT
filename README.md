@@ -14,50 +14,114 @@
 - **Easy-to-Use CLI:** A clean and simple command-line interface for smooth interaction.
 - **Cross-Platform:** Tested and working on Kali Linux, Ubuntu, and Termux.
 
-# 🛠️ Installation
+# 🛠️ Installation (Manual)
 
-Clone the repository:
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/Kirozaku/Marina-GPT.git
 cd Marina-GPT
 ```
 
-Install the required dependencies:
+## 2. Install Dependencies
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
-If your system requires forced installation (varies by OS):
+Jika memerlukan instalasi paksa:
 
 ```bash
 pip3 install -r requirements.txt --break-system-packages
 ```
 
-Manual installation (in case some modules are missing):
+## 3. Install Manual (Jika ada modul yang belum terpasang)
 
 ```bash
 pip3 install requests
 pip3 install readline
 ```
 
-## 🚀 Usage
 
-Run the tool M.A.R.I.N.A from the terminal termux & linux:
+# 🚀 Usage
+
+## Menjalankan M.A.R.I.N.A (Termux & Linux)
 
 ```bash
 python3 marina.py
 ```
-Run the tool C.H.E.Y.Y from the terminal linux:
+
+## Menjalankan C.H.E.Y.Y (Linux)
 
 ```bash
 python3 cheyy-linux.py
 ```
-Run the tool C.H.E.Y.Y from the terminal termux:
+
+## Menjalankan C.H.E.Y.Y (Termux)
 
 ```bash
 python3 cheyy-termux.py
+```
+
+---
+
+# ⚡ Installation (Automatic)
+
+# 📱 Termux Installation
+
+## Install M.A.R.I.N.A
+
+```bash
+wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/marina-termux
+chmod +x marina-termux
+```
+
+Jalankan:
+
+```bash
+./marina-termux
+```
+
+## Install C.H.E.Y.Y
+
+```bash
+wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/cheyy-termux
+chmod +x cheyy-termux
+```
+
+Jalankan:
+
+```bash
+./cheyy-termux
+```
+
+
+# 🖥️ Linux Installation
+
+## Install M.A.R.I.N.A
+
+```bash
+wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/marina-linux
+chmod +x marina-linux
+```
+
+Jalankan:
+
+```bash
+./marina-linux
+```
+
+## Install C.H.E.Y.Y
+
+```bash
+wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/cheyy-linux
+chmod +x cheyy-linux
+```
+
+Jalankan:
+
+```bash
+./cheyy-linux
 ```
 
 
