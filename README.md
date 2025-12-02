@@ -42,21 +42,6 @@ pip3 install requests
 pip3 install readline
 ```
 
-# 🚀 Usage
-
-Run the **M.A.R.I.N.A** tool:
-
-```bash
-python3 marina.py
-```
-
-Run the **C.H.E.Y.Y** tool:
-
-```bash
-python3 cheyy.py
-```
-
-
 ## 🚀 Usage
 
 Run the tool M.A.R.I.N.A from the terminal:
