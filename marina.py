@@ -38,6 +38,7 @@ OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 OPENROUTER_MODEL = "deepseek/deepseek-chat"
 
 KEY_FILE = Path(__file__).with_name("key.txt")
+
 OPENROUTER_API_KEY = None
 TEMPERATURE = 0.7
 
@@ -89,6 +90,7 @@ is_summarizing = False
 MAX_HISTORY_CHARS = 200000
 MAX_HISTORY_MESSAGES = 150
 
+
 def print_banner():
     print("\033];M.A.R.I.N.A\007", end="")
     banner = f"""
@@ -136,9 +138,6 @@ def print_banner():
 """
     print(banner.format(RED=RED, WHT=WHT, NRM=NRM))
 
-if hasattr(os, "getuid") and os.getuid() > 0:
-    print("Be root, motherfucker!")
-    sys.exit(1)
 
 def trim_history():
     global conversation_history, last_summarized_index
@@ -159,22 +158,26 @@ def trim_history():
     if last_summarized_index > len(conversation_history):
         last_summarized_index = len(conversation_history)
 
+
 def need_summary():
-    if len(conversation_history) < 60:
-        return False
-    return len(conversation_history) - last_summarized_index >= 20
+    return len(conversation_history) >= 60 and len(conversation_history) - last_summarized_index >= 20
+
 
 def load_key_from_file():
     if not KEY_FILE.exists():
         return None
     try:
-        content = KEY_FILE.read_text(encoding="utf-8").strip()
-        return content or None
+        return KEY_FILE.read_text(encoding="utf-8").strip() or None
     except Exception:
         return None
 
+
 def save_key_to_file(key):
-    KEY_FILE.write_text(key.strip() + "\n", encoding="utf-8")
+    try:
+        KEY_FILE.write_text(key.strip() + "\n", encoding="utf-8")
+    except Exception:
+        pass
+
 
 def map_openrouter_error(status, data):
     if isinstance(data, dict):
@@ -190,6 +193,7 @@ def map_openrouter_error(status, data):
     if status >= 500:
         return "Server error " + str(status) + ": " + msg
     return "Error " + str(status) + ": " + msg
+
 
 def call_openrouter(messages, temperature, max_tokens):
     if not OPENROUTER_API_KEY:
@@ -207,12 +211,7 @@ def call_openrouter(messages, temperature, max_tokens):
         "max_tokens": int(max_tokens)
     }
     try:
-        resp = requests.post(
-            OPENROUTER_API_URL,
-            headers=headers,
-            data=json.dumps(payload),
-            timeout=60
-        )
+        resp = requests.post(OPENROUTER_API_URL, headers=headers, data=json.dumps(payload), timeout=60)
     except Exception as e:
         return {"error": "Connection failed: " + str(e)}
     try:
@@ -222,10 +221,10 @@ def call_openrouter(messages, temperature, max_tokens):
     if resp.status_code != 200:
         return {"error": map_openrouter_error(resp.status_code, data)}
     try:
-        text = data["choices"][0]["message"]["content"]
+        return {"text": data["choices"][0]["message"]["content"]}
     except Exception:
         return {"error": "Unexpected response: " + str(data)}
-    return {"text": text}
+
 
 def call_openrouter_stream(messages, temperature, max_tokens):
     if not OPENROUTER_API_KEY:
@@ -244,13 +243,7 @@ def call_openrouter_stream(messages, temperature, max_tokens):
         "stream": True
     }
     try:
-        with requests.post(
-            OPENROUTER_API_URL,
-            headers=headers,
-            data=json.dumps(payload),
-            stream=True,
-            timeout=600
-        ) as resp:
+        with requests.post(OPENROUTER_API_URL, headers=headers, data=json.dumps(payload), stream=True, timeout=600) as resp:
             if resp.status_code != 200:
                 try:
                     data = resp.json()
@@ -285,26 +278,23 @@ def call_openrouter_stream(messages, temperature, max_tokens):
     except Exception as e:
         return {"error": "Connection failed (stream): " + str(e), "text": ""}
 
+
 def test_api_key(key):
     global OPENROUTER_API_KEY
     OPENROUTER_API_KEY = key.strip()
     messages = [{"role": "user", "content": "Reply with exactly one word: OK"}]
     result = call_openrouter(messages, 0.0, 3)
     if "error" in result:
-        print(RED + "[!] API key verification failed: " + result["error"] + NRM)
         return False
     text = result.get("text", "").strip().upper()
-    if not text:
-        print(RED + "[!] Empty response verifying API key" + NRM)
-        return False
-    return True
+    return bool(text)
+
 
 def ensure_api_key():
     existing = load_key_from_file()
     if existing:
         if test_api_key(existing):
             return
-        print(RED + "[!] Key invalid, requesting new key" + NRM)
         try:
             KEY_FILE.unlink()
         except Exception:
@@ -322,6 +312,7 @@ def ensure_api_key():
             return
         print(RED + "Invalid key, try again." + NRM)
 
+
 def build_summary_messages():
     global conversation_history, last_summarized_index
     slice_history = conversation_history[last_summarized_index:]
@@ -337,6 +328,7 @@ def build_summary_messages():
         {"role": "user", "content": big + "\n\nSummarize into key points (max ~300 words)."}
     ]
 
+
 def maybe_summarize_long_history():
     global is_summarizing, long_term_summary, last_summarized_index
     if is_summarizing:
@@ -350,19 +342,19 @@ def maybe_summarize_long_history():
     try:
         result = call_openrouter(messages, 0.3, 512)
         if "error" in result:
-            print(RED + "[!] Failed to summarize: " + result["error"] + NRM)
             return
         summary = result.get("text", "").strip()
         if summary:
             combined = (long_term_summary + "\n\n" + summary).strip()
             long_term_summary = combined[-8000:]
             last_summarized_index = len(conversation_history)
-            print(CYN + "[i] Summary updated" + NRM)
     finally:
         is_summarizing = False
 
+
 def is_command(text):
     return text.strip().startswith("/")
+
 
 def handle_command(text):
     global conversation_history, long_term_summary, last_summarized_index, TEMPERATURE
@@ -394,6 +386,7 @@ def handle_command(text):
         return GRN + f"Temperature set to {TEMPERATURE}" + NRM
     return RED + "Unknown command" + NRM
 
+
 def build_chat_messages():
     trim_history()
     system_content = BASE_PERSONA.strip()
@@ -403,6 +396,7 @@ def build_chat_messages():
     for m in conversation_history:
         messages.append({"role": m["role"], "content": m["content"]})
     return messages
+
 
 def send_message_streaming(user_text):
     global conversation_history
@@ -418,6 +412,7 @@ def send_message_streaming(user_text):
     reply = result.get("text", "") or "No response."
     conversation_history.append({"role": "assistant", "content": reply})
     return reply
+
 
 def main():
     print_banner()
@@ -444,6 +439,7 @@ def main():
         print("\n" + CYN + "M.A.R.I.N.A:" + NRM + "\n", end="")
         send_message_streaming(user_text)
         print("\n" + "-" * 50)
+
 
 if __name__ == "__main__":
     main()
