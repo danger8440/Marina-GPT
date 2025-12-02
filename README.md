@@ -14,7 +14,7 @@
 - **Easy-to-Use CLI:** A clean and simple command-line interface for smooth interaction.
 - **Cross-Platform:** Tested and working on Kali Linux, Ubuntu, and Termux.
 
-## 🛠️ Installation
+# 🛠️ Installation
 
 Clone the repository:
 
@@ -23,11 +23,39 @@ git clone https://github.com/Kirozaku/Marina-GPT.git
 cd Marina-GPT
 ```
 
-Install the dependencies (if any):
+Install the required dependencies:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+If your system requires forced installation (varies by OS):
 
 ```bash
 pip3 install -r requirements.txt --break-system-packages
 ```
+
+Manual installation (in case some modules are missing):
+
+```bash
+pip3 install requests
+pip3 install readline
+```
+
+# 🚀 Usage
+
+Run the **M.A.R.I.N.A** tool:
+
+```bash
+python3 marina.py
+```
+
+Run the **C.H.E.Y.Y** tool:
+
+```bash
+python3 cheyy.py
+```
+
 
 ## 🚀 Usage
 
