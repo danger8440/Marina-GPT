@@ -16,7 +16,7 @@
 
 # 🛠️ Installation (Manual)
 
-## 1. Clone Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Kirozaku/Marina-GPT.git
@@ -29,13 +29,13 @@ cd Marina-GPT
 pip3 install -r requirements.txt
 ```
 
-Jika memerlukan instalasi paksa:
+If your system requires forced installation:
 
 ```bash
 pip3 install -r requirements.txt --break-system-packages
 ```
 
-## 3. Install Manual (Jika ada modul yang belum terpasang)
+## 3. Manual Installation (If some modules are missing)
 
 ```bash
 pip3 install requests
@@ -45,25 +45,24 @@ pip3 install readline
 
 # 🚀 Usage
 
-## Menjalankan M.A.R.I.N.A (Termux & Linux)
+## Run M.A.R.I.N.A (Termux & Linux)
 
 ```bash
 python3 marina.py
 ```
 
-## Menjalankan C.H.E.Y.Y (Linux)
+## Run C.H.E.Y.Y (Linux)
 
 ```bash
 python3 cheyy-linux.py
 ```
 
-## Menjalankan C.H.E.Y.Y (Termux)
+## Run C.H.E.Y.Y (Termux)
 
 ```bash
 python3 cheyy-termux.py
 ```
 
----
 
 # ⚡ Installation (Automatic)
 
@@ -76,7 +75,7 @@ wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/marina-termux
 chmod +x marina-termux
 ```
 
-Jalankan:
+Run:
 
 ```bash
 ./marina-termux
@@ -89,7 +88,7 @@ wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/cheyy-termux
 chmod +x cheyy-termux
 ```
 
-Jalankan:
+Run:
 
 ```bash
 ./cheyy-termux
@@ -105,7 +104,7 @@ wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/marina-linux
 chmod +x marina-linux
 ```
 
-Jalankan:
+Run:
 
 ```bash
 ./marina-linux
@@ -118,11 +117,12 @@ wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/cheyy-linux
 chmod +x cheyy-linux
 ```
 
-Jalankan:
+Run:
 
 ```bash
 ./cheyy-linux
 ```
+
 
 
 ## 💻 Screenshot M.A.R.I.N.A
